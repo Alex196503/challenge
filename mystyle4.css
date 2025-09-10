@@ -1,0 +1,55 @@
+*{ margin:0; padding:0; box-sizing: border-box; } body{ background-color:hsl(47, 88%, 63%); color:black; font-size: 16px; font-family: 'Figtree',sans-serif; } .container{ background-color: hsl(0, 0%, 100%); color:black; display: flex; justify-content: center; align-items: center; flex-direction: column; max-width: 360px; height:500px; margin-left:650px; margin-top:150px; border:1px solid black; border-radius: 10px; box-shadow: 8px 10px black; } .container:hover{ animation-name: resize; animation-duration: 4s; } .image{ width:350px; height:350px; margin:10px 10px 0 10px; padding:10px; border-radius: 20px; object-fit: cover; } .h3ulet{ background-color: hsl(47, 88%, 63%); color:black; padding:8px; border-radius: 8px; margin-left:15px; align-self: flex-start; font-weight: 800; } .paragraf{ align-self: flex-start; margin:10px; padding:3px; } .h1{ font-weight: 800; color:black; align-self: flex-start; margin:11px; } .p{ color:hsl(0, 0%, 42%); align-self: flex-start; margin:11px; text-align: left; } .avatar{ width:40px; height: 40px; margin:10px; clip-path: circle(); } .h3{ position:relative; bottom:60px; right:45px; color:hsl(0, 0%, 7%); font-weight: bold; } @keyframes resize{ from {max-width:400px;}
+ to{max-width:500px;} }
+ /* TABLETE - sub 768px */
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px;
+        height: auto; /* să se ajusteze pe conținut */
+        margin: 50px auto; /* centrat */
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .h1 {
+        font-size: 18px;
+    }
+
+    .p {
+        font-size: 14px;
+    }
+}
+
+/* TELEFOANE - sub 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 20px;
+        padding: 15px;
+        box-shadow: 4px 6px black; /* mai mică umbra pe telefon */
+    }
+
+    .image {
+        border-radius: 10px;
+    }
+
+    .h1 {
+        font-size: 16px;
+    }
+
+    .p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .author h3 {
+        font-size: 13px;
+    }
+}
